@@ -63,10 +63,6 @@ def puzzle_one(word_list):
     answer = "DEFAULT ANSWER"
     
     # add code to find the correct answer here, and assign it to the variable 'answer'
-    for word in word_list:
-        if word[0] == 'e':
-            if 'cat' in word:
-                answer = word
 
     return Puzzle(task, answer)
 
@@ -86,10 +82,6 @@ def puzzle_two(word_list):
     answer = "DEFAULT ANSWER"
 
     # add code to find the correct answer here, and assign it to the variable 'answer'
-    for word in word_list:
-        if word[0] == word[-1]:
-            if len(word) == 11:
-                answer = word
 
     return Puzzle(task, answer)
 
@@ -113,14 +105,6 @@ def puzzle_three(word_list):
     answer = "DEFAULT ANSWER"
     
     # add code to find the correct answer here, and assign it to the variable 'answer'
-    for word in word_list:
-        if word[0] == 'b':
-            palindrome = True
-            for i in range(0, len(word)):
-                if word[i] != word[-(1+i)]:
-                    palindrome = False
-            if palindrome:
-                answer = word
 
     return Puzzle(task, answer)
 
@@ -140,13 +124,6 @@ def puzzle_four(word_list):
     vowels = ['a', 'e', 'i', 'o', 'u']
 
     # add code to find the correct answer here, and assign it to the variable 'answer'
-    for word in word_list:
-        has_vowels = False
-        for letter in word:
-            if letter in vowels:
-                has_vowels = True
-        if not has_vowels and word[0] == 's' and len(word) == 3:
-            answer = word
 
     return Puzzle(task, answer)
 
@@ -173,10 +150,6 @@ def puzzle_five(word_list):
     jeffs_trained_wax_bicycles = "jeff's trained wax bicycles"
 
     # add code to find the correct answer here, and assign it to the variable 'answer'
-    for word in word_list:
-        if len(word) == 3:
-            if all(letter not in jeffs_trained_wax_bicycles for letter in word):
-                answer = word
 
     return Puzzle(task, answer)
 
@@ -196,13 +169,6 @@ def puzzle_six(word_list):
     answer = "DEFAULT ANSWER"
 
     # add code to find the correct answer here, and assign it to the variable 'answer'
-    for word in word_list:
-        scrabble_value = 0
-        for letter in word:
-            scrabble_value += calculate_letter_scrabble_value(letter)
-
-        if scrabble_value == 24:
-            answer = word
 
     return Puzzle(task, answer)
 
